@@ -4,7 +4,7 @@
 
 // Nome sarà l’unica proprietà da compilare, le altre saranno tutte settate a 0. Generare numeri random al posto degli 0 nelle proprietà: Punti fatti e falli subiti. 
 
-var squadre = [
+const squadre = [
     {
         nome: "Milan",
         punti: 0,
@@ -34,16 +34,16 @@ var squadre = [
 
 // Infine usando la destrutturazione creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console:
 
-var nomeFalli = [];
+const nomeFalli = [];
 
-for (var i = 0; i < squadre.length; i++) {
+for (let i = 0; i < squadre.length; i++) {
 
-    var messaggio = document.getElementById("falli_subiti");
+    let messaggio = document.getElementById("falli_subiti");
     
     squadre[i]["punti"] = Math.floor((Math.random() * 50) + 1);
     squadre[i]["falli"] = Math.floor((Math.random() * 50) + 1);
 
-    var {nome, falli} = squadre[i];
+    let {nome, falli} = squadre[i];
     nomeFalli.push({nome, falli});
 
     messaggio.innerHTML += `<li> Squadra: <strong> ${nome} </strong> <br> Falli subiti: <strong> ${falli} </strong> </li>`;

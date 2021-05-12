@@ -2,7 +2,7 @@
 
 // Creare un array di oggetti: Ogni oggetto descriverà una bici da corsa con le seguenti proprietà: nome e peso. 
 
-var biciCorsaLista = [
+const biciCorsaLista = [
     {
         nome: "TrekEmonda",
         peso: 8
@@ -27,11 +27,11 @@ var biciCorsaLista = [
 
 // Stampare a schermo la bici con peso minore:
 
-var biciSuperLeggera = biciCorsaLista[0];
+let biciSuperLeggera = biciCorsaLista[0];
 
-for (var i = 0; i < biciCorsaLista.length; i++) {
+for (let i = 0; i < biciCorsaLista.length; i++) {
 
-    var bici = biciCorsaLista[i];
+    let bici = biciCorsaLista[i];
     
     if (bici["peso"] < biciSuperLeggera["peso"]) {
         biciSuperLeggera = bici;
@@ -43,9 +43,9 @@ console.log("La bici più leggera è: ", biciSuperLeggera);
 // ---------------- ES-6 ---------------------
 // Stampare a schermo la bici con peso minore utilizzando destructuring e template literal:
 
-var messaggio = document.getElementById("bici_leggera");
+let messaggio = document.getElementById("bici_leggera");
 
-var {nome, peso} = biciSuperLeggera;
+let {nome, peso} = biciSuperLeggera;
 
 messaggio.innerHTML = `La bici da corsa più leggera è:
 ${nome}, del peso di soli ${peso} kg`;
